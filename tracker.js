@@ -4,7 +4,8 @@ const cheerio = require('cheerio');
 const nodemailer = require('nodemailer');
 const fs = require('fs');
 
-const URL = 'https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=VFSDEL5506805';
+const REFNUM = process.env.VISA_REFNUM;
+const URL = `https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=${REFNUM}`;
 const EMAIL_TO = process.env.EMAIL_TO;
 const EMAIL_FROM = process.env.EMAIL_FROM; // Now loaded from .env
 const CHECK_INTERVAL = 10 * 60 * 1000; // 10 minutes

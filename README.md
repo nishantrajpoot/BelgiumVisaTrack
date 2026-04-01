@@ -20,14 +20,17 @@ npm install
 
 ### 2. Configure environment variables
 
+
 Create a `.env` file in your project root like so:
 ```
 GMAIL_APP_PASSWORD=your_gmail_app_password_here
 EMAIL_FROM=your_gmail_address@gmail.com
 EMAIL_TO=recipient_address@example.com
+VISA_REFNUM=VFSxxxxxxxxxx
 ```
-- EMAIL_FROM: The Gmail address you are sending from (must match the app password account)
-- EMAIL_TO: Where notifications are delivered
+- `VISA_REFNUM` is your personal reference number from the VFS site (e.g. `VFSDEL5506805`).
+- `EMAIL_FROM`: The Gmail address you are sending from (must match the app password account)
+- `EMAIL_TO`: Where notifications are delivered
 - Uses Gmail for sending notification/test emails.
 - Make sure app password is enabled for your Gmail account if 2FA is on.
 

@@ -16,7 +16,8 @@ const transporter = nodemailer.createTransport({
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const URL = 'https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=VFSDEL5506805';
+const REFNUM = process.env.VISA_REFNUM;
+const URL = `https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=${REFNUM}`;
 
 async function fetchDecision() {
   const response = await axios.get(URL);

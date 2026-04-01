@@ -21,7 +21,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const URL = 'https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=VFSDEL5506805';
+const REFNUM = process.env.VISA_REFNUM;
+const URL = `https://infovisa.ibz.be/ResultFr.aspx?place=DEL&refnum=${REFNUM}`;
 
 // Scrape the Decision value from webpage
 async function fetchDecision() {
