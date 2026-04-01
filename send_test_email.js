@@ -1,8 +1,8 @@
 require('dotenv').config();
 const nodemailer = require('nodemailer');
 
-const EMAIL_TO = 'nishantrajpoot101@hotmail.com';
-const EMAIL_FROM = 'nishantrajpoot101@gmail.com';
+const EMAIL_TO = process.env.EMAIL_TO;
+const EMAIL_FROM = process.env.EMAIL_FROM;
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
