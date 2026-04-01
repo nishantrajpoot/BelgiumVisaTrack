@@ -1,0 +1,9 @@
+.env
+node_modules/
+tracker_output.log
+*.log
+prev_decision.txt
+*.bak
+package-lock.json
+coverage/
+dist/
